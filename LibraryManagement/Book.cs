@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 using LibraryManagement.Areas.Identity.Data;
 namespace LibraryManagement
 {
-    public class Book:BookContext
+    public class Book
     {
         public int Id { get; set; }
         [Required, JsonPropertyName("Name")]

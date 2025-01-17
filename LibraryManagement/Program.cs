@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using LibraryManagement.Areas.Identity.Data;
+using LibraryManagement.services;
 
 namespace LibraryManagement
 {
@@ -21,6 +22,7 @@ namespace LibraryManagement
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddScoped<UserService>();
 
             var app = builder.Build();
 
